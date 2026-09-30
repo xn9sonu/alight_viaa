@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MotionVanta — Premium Alight Motion Creative Hub & Digital Store</title>
+  <meta name="description" content="MotionVanta: Pusat produk digital Alight Motion Pro, Preset XML, Efek Cinematic, dan resource editing premium terbaik bergaransi.">
+  <meta name="theme-color" content="#070707">
+
+  <!-- Favicon & App Icons -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Cinematic Background -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-blob ambient-blob-1"></div>
+    <div class="ambient-blob ambient-blob-2"></div>
+    <div class="ambient-blob ambient-blob-3"></div>
+    <div class="ambient-lines"></div>
+  </div>
+
+  <!-- Sticky Main Navigation -->
+  <header class="main-navbar" id="main-nav">
+    <div class="nav-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="MotionVanta Home">
+        <span class="logo-mark">⚡</span>
+        <span>Motion<span class="logo-accent">Vanta</span></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="#products" class="nav-link" data-i18n="nav_products">Produk</a></li>
+          <li><a href="#pricing" class="nav-link" data-i18n="nav_pricing">Harga</a></li>
+          <li><a href="#features" class="nav-link" data-i18n="nav_features">Keunggulan</a></li>
+          <li><a href="#how-it-works" class="nav-link" data-i18n="nav_how_it_works">Cara Beli</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Nav Actions: Language Switcher & WhatsApp CTA -->
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <div class="lang-switcher" role="group" aria-label="Language Selector">
+          <button class="lang-btn active" data-lang-switch="id" title="Bahasa Indonesia">
+            <span>🇮🇩</span> <span>ID</span>
+          </button>
+          <button class="lang-btn" data-lang-switch="en" title="English Language">
+            <span>🇬🇧</span> <span>EN</span>
+          </button>
+        </div>
+
+        <!-- WhatsApp Header Button (Desktop) -->
+        <a href="https://wa.me/6283121321450?text=Halo%20MotionVanta%2C%20saya%20ingin%20mengetahui%20produk%20premium%20yang%20tersedia." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm direct-wa-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c4.55 0 8.24 3.69 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.178 8.178 0 0 1-5.83 2.41c-1.47 0-2.93-.39-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.55 3.7-8.24 8.26-8.24m4.53 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8 2.52 1.09 2.52.73 2.98.69.45-.04 1.47-.6 1.68-1.18.2-.59.2-1.09.14-1.19-.06-.1-.22-.16-.47-.28z"/></svg>
+          <span data-i18n="nav_wa_btn">WhatsApp Kami</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div>
+      <a href="#home" class="brand-logo" style="margin-bottom: 2.5rem; display: inline-flex;">
+        <span class="logo-mark">⚡</span>
+        <span>Motion<span class="logo-accent">Vanta</span></span>
+      </a>
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link" data-i18n="nav_home">Home</a></li>
+        <li><a href="#products" class="mobile-nav-link" data-i18n="nav_products">Produk</a></li>
+        <li><a href="#pricing" class="mobile-nav-link" data-i18n="nav_pricing">Harga</a></li>
+        <li><a href="#features" class="mobile-nav-link" data-i18n="nav_features">Keunggulan</a></li>
+        <li><a href="#how-it-works" class="mobile-nav-link" data-i18n="nav_how_it_works">Cara Beli</a></li>
+        <li><a href="#faq" class="mobile-nav-link" data-i18n="nav_faq">FAQ</a></li>
+        <li><a href="#contact" class="mobile-nav-link" data-i18n="nav_contact">Kontak</a></li>
+      </ul>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <div class="lang-switcher" style="align-self: flex-start;">
+        <button class="lang-btn active" data-lang-switch="id">
+          <span>🇮🇩</span> <span>ID</span>
+        </button>
+        <button class="lang-btn" data-lang-switch="en">
+          <span>🇬🇧</span> <span>EN</span>
+        </button>
+      </div>
+      <a href="https://wa.me/6283121321450?text=Halo%20MotionVanta%2C%20saya%20ingin%20mengetahui%20produk%20premium%20yang%20tersedia." target="_blank" rel="noopener noreferrer" class="btn btn-primary direct-wa-btn" style="width: 100%;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c4.55 0 8.24 3.69 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.178 8.178 0 0 1-5.83 2.41c-1.47 0-2.93-.39-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.55 3.7-8.24 8.26-8.24m4.53 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8 2.52 1.09 2.52.73 2.98.69.45-.04 1.47-.6 1.68-1.18.2-.59.2-1.09.14-1.19-.06-.1-.22-.16-.47-.28z"/></svg>
+        <span>CHAT VIA WHATSAPP</span>
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <canvas id="hero-particles" aria-hidden="true"></canvas>
+
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column: Headline & CTA -->
+          <div class="hero-content">
+            <div class="badge-pill" data-i18n="hero_badge">
+              🔥 ALIGHT MOTION EDITING HUB #1
+            </div>
+
+            <h1 class="hero-title">
+              <span class="title-line condensed-title" data-i18n="hero_title_1">EDIT LEBIH POWERFUL.</span>
+              <span class="title-line condensed-title text-gradient" data-i18n="hero_title_2">HASIL LEBIH PREMIUM.</span>
+            </h1>
+
+            <p class="hero-subtitle" data-i18n="hero_subtitle">
+              Dapatkan akses premium, preset, XML, efek, dan berbagai kebutuhan editing untuk membuat karya yang lebih profesional.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#pricing" class="btn btn-primary btn-lg">
+                <span data-i18n="hero_btn_buy">BELI SEKARANG</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+
+              <a href="#products" class="btn btn-secondary btn-lg">
+                <span data-i18n="hero_btn_explore">LIHAT PRODUK</span>
+              </a>
+            </div>
+
+            <div class="hero-trust-line">
+              <span class="trust-dot"></span>
+              <span data-i18n="hero_trust">Premium • No Watermark • Android & iOS</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Artwork Display -->
+          <div class="hero-visual-wrapper">
+            <div class="hero-glow-backlight"></div>
+
+            <div class="hero-artwork-frame">
+              <img src="assets/images/hero-character.jpg" alt="MotionVanta Hero Gaming Character" id="hero-main-img">
+            </div>
+
+            <!-- Floating Badges -->
+            <div class="floating-stat-badge badge-top-left">
+              <div class="badge-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+              </div>
+              <div>
+                <span data-i18n="hero_stat_quality">Kualitas 4K 60FPS</span>
+              </div>
+            </div>
+
+            <div class="floating-stat-badge badge-bottom-right">
+              <div class="badge-icon" style="color: #00E5FF; background: rgba(0,229,255,0.15);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              </div>
+              <div>
+                <span data-i18n="hero_stat_assets">100+ XML & Preset Siap Pakai</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION ("KENAPA MOTIONVANTA?") -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill pill-center" data-i18n="features_pill">KEUNGGULAN KAMI</div>
+          <h2 class="section-title condensed-title" data-i18n="features_title">KENAPA MOTIONVANTA?</h2>
+          <p class="section-subtitle" data-i18n="features_subtitle">
+            Didesain khusus untuk mobile editor, creator jedag-jedug, AMV, dan profesional yang menginginkan alur kerja cepat tanpa kompromi.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- 1. Premium Effects -->
+          <div class="feature-card card-glass">
+            <div class="feature-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h3 class="feature-title" data-i18n="feat_1_title">Premium Effects</h3>
+            <p class="feature-desc" data-i18n="feat_1_desc">Akses berbagai efek premium dan transisi cinematic eksklusif tanpa batasan.</p>
+          </div>
+
+          <!-- 2. Preset Support -->
+          <div class="feature-card card-glass">
+            <div class="feature-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <h3 class="feature-title" data-i18n="feat_2_title">Preset Support</h3>
+            <p class="feature-desc" data-i18n="feat_2_desc">Mendukung import dan export preset berukuran besar dengan lancar dan stabil.</p>
+          </div>
+
+          <!-- 3. XML Support -->
+          <div class="feature-card card-glass">
+            <div class="feature-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3 class="feature-title" data-i18n="feat_3_title">XML Support</h3>
+            <p class="feature-desc" data-i18n="feat_3_desc">Full support file XML 5MB+ untuk workflow editing cepat dan praktis.</p>
+          </div>
+
+          <!-- 4. No Watermark -->
+          <div class="feature-card card-glass">
+            <div class="feature-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="feature-title" data-i18n="feat_4_title">No Watermark</h3>
+            <p class="feature-desc" data-i18n="feat_4_desc">Gunakan pengalaman premium sepenuhnya bersih tanpa watermark mengganggu.</p>
+          </div>
+
+          <!-- 5. Android & iOS -->
+          <div class="feature-card card-glass">
+            <div class="feature-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            </div>
+            <h3 class="feature-title" data-i18n="feat_5_title">Android & iOS</h3>
+            <p class="feature-desc" data-i18n="feat_5_desc">Kompatibel dan siap digunakan untuk perangkat Android maupun Apple iOS.</p>
+          </div>
+
+          <!-- 6. Fast Support -->
+          <div class="feature-card card-glass">
+            <div class="feature-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3 class="feature-title" data-i18n="feat_6_title">Fast Support</h3>
+            <p class="feature-desc" data-i18n="feat_6_desc">Customer support responsif dan panduan instalasi mudah melalui WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT SHOWCASE SECTION -->
+    <section class="products-section" id="products">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill pill-center" data-i18n="products_pill">KATALOG RESMI</div>
+          <h2 class="section-title condensed-title" data-i18n="products_title">PRODUK PREMIUM</h2>
+          <p class="section-subtitle" data-i18n="products_subtitle">
+            Pilih kebutuhan editing kamu dan mulai buat karya yang lebih powerful.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs-wrapper">
+          <button class="filter-btn active" data-filter="all" data-i18n="tab_all">Semua Produk</button>
+          <button class="filter-btn" data-filter="apps" data-i18n="tab_apps">Akun Premium</button>
+          <button class="filter-btn" data-filter="presets" data-i18n="tab_presets">Preset & XML Pack</button>
+          <button class="filter-btn" data-filter="effects" data-i18n="tab_effects">Effects & Overlay</button>
+        </div>
+
+        <!-- Dynamic Product Cards Grid -->
+        <div class="products-grid" id="products-grid">
+          <!-- Injected dynamically via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill pill-center" data-i18n="pricing_pill">PILIHAN PAKET</div>
+          <h2 class="section-title condensed-title" data-i18n="pricing_title">HARGA PREMIUM</h2>
+          <p class="section-subtitle" data-i18n="pricing_subtitle">
+            Pilihan fleksibel sesuai kebutuhan editing kamu. Transaksi aman, instan, dan bergaransi.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Plan 1: Private 1 Bulan -->
+          <div class="pricing-card card-glass">
+            <div class="plan-header">
+              <span class="badge-pill" data-i18n="plan_monthly_badge">COCOK UNTUK COBA</span>
+              <h3 class="plan-name" data-i18n="plan_monthly_title">PRIVATE 1 BULAN</h3>
+              <div class="plan-price-wrapper">
+                <span class="plan-price" data-i18n="plan_monthly_price">Rp 15.000</span>
+              </div>
+              <p class="plan-subtitle" data-i18n="plan_monthly_sub">Akses private 30 hari</p>
+            </div>
+
+            <ul class="plan-features-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_monthly_feat1">1 Bulan Full Garansi</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_monthly_feat2">Akun Private Eksklusif</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_monthly_feat3">Unlock Semua Fitur Premium</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_monthly_feat4">Support Import XML 5MB+</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_monthly_feat5">Tanpa Watermark</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_monthly_feat6">Support Android & iOS</span>
+              </li>
+            </ul>
+
+            <button class="btn btn-secondary plan-cta-btn" data-plan-name="Private 1 Bulan">
+              <span data-i18n="plan_monthly_cta">PESAN SEKARANG</span>
+            </button>
+          </div>
+
+          <!-- Plan 2: Private 1 Tahun (Featured Glowing Card) -->
+          <div class="pricing-card card-glass featured">
+            <div class="card-top-tag" data-i18n="plan_private_badge">REKOMENDASI TERBAIK</div>
+
+            <div class="plan-header">
+              <h3 class="plan-name" data-i18n="plan_private_title">PRIVATE 1 TAHUN</h3>
+              <div class="plan-price-wrapper">
+                <span class="plan-price" data-i18n="plan_private_price">Rp 45.000</span>
+              </div>
+              <p class="plan-subtitle" data-i18n="plan_private_sub">Akses eksklusif 1 device/user</p>
+            </div>
+
+            <ul class="plan-features-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong style="color: #fff;" data-i18n="plan_private_feat1">1 Tahun Full Garansi</strong>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_private_feat2">Akun Private (Bisa Pakai Email Sendiri)</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_private_feat3">Unlock Semua Efek & Font Premium</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_private_feat4">Support Export 4K 60FPS</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_private_feat5">Import XML > 5MB Tanpa Batas</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_private_feat6">Tanpa Watermark & Tanpa Iklan</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_private_feat7">Support Android & Apple iOS</span>
+              </li>
+            </ul>
+
+            <button class="btn btn-primary plan-cta-btn" data-plan-name="Private 1 Tahun">
+              <span data-i18n="plan_private_cta">PESAN SEKARANG</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+
+          <!-- Plan 3: Sharing 1 Tahun -->
+          <div class="pricing-card card-glass">
+            <div class="plan-header">
+              <span class="badge-pill" data-i18n="plan_sharing_badge">SUPER HEMAT</span>
+              <h3 class="plan-name" data-i18n="plan_sharing_title">SHARING 1 TAHUN</h3>
+              <div class="plan-price-wrapper">
+                <span class="plan-price" data-i18n="plan_sharing_price">Rp 20.000</span>
+              </div>
+              <p class="plan-subtitle" data-i18n="plan_sharing_sub">Akun sharing terkelola</p>
+            </div>
+
+            <ul class="plan-features-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_sharing_feat1">1 Tahun Periode Garansi</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_sharing_feat2">Akses Akun Sharing Stabil</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_sharing_feat3">Unlock Efek & Filter Premium</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_sharing_feat4">Bebas Export Tanpa Watermark</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_sharing_feat5">Hemat Biaya untuk Pemula</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="plan_sharing_feat6">Support Android & iOS</span>
+              </li>
+            </ul>
+
+            <button class="btn btn-secondary plan-cta-btn" data-plan-name="Sharing 1 Tahun">
+              <span data-i18n="plan_sharing_cta">PESAN SEKARANG</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION (3-STEP PROCESS) -->
+    <section class="how-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill pill-center" data-i18n="how_pill">ALUR PEMBELIAN</div>
+          <h2 class="section-title condensed-title" data-i18n="how_title">CARA ORDER MUDAH</h2>
+          <p class="section-subtitle" data-i18n="how_subtitle">
+            Hanya butuh 3 langkah singkat untuk mulai menggunakan produk dari MotionVanta.
+          </p>
+        </div>
+
+        <div class="how-grid">
+          <!-- Step 01 -->
+          <div class="how-card card-glass">
+            <div class="how-step-num" data-i18n="step_1_num">01</div>
+            <h3 class="how-step-title" data-i18n="step_1_title">Pilih Produk</h3>
+            <p class="how-step-desc" data-i18n="step_1_desc">
+              Pilih produk atau paket yang kamu inginkan dari katalog kami.
+            </p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="how-card card-glass">
+            <div class="how-step-num" data-i18n="step_2_num">02</div>
+            <h3 class="how-step-title" data-i18n="step_2_title">Hubungi Kami</h3>
+            <p class="how-step-desc" data-i18n="step_2_desc">
+              Klik tombol WhatsApp dan kirim detail pesanan kamu ke admin.
+            </p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="how-card card-glass">
+            <div class="how-step-num" data-i18n="step_3_num">03</div>
+            <h3 class="how-step-title" data-i18n="step_3_title">Terima Produk</h3>
+            <p class="how-step-desc" data-i18n="step_3_desc">
+              Ikuti proses pembayaran dan dapatkan produk atau akun sesuai pesanan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST & QUALITY ASSURANCE SECTION -->
+    <section class="trust-section">
+      <div class="container">
+        <div class="trust-banner-card">
+          <div class="trust-grid">
+            <div class="trust-item">
+              <div class="trust-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <h4 class="trust-item-title" data-i18n="trust_card1_title">100% Produk Asli & Bergaransi</h4>
+              <p class="trust-item-desc" data-i18n="trust_card1_desc">Setiap pembelian akun atau preset disertai jaminan sesuai durasi paket yang kamu pilih.</p>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <h4 class="trust-item-title" data-i18n="trust_card2_title">Proses Cepat & Praktis</h4>
+              <p class="trust-item-desc" data-i18n="trust_card2_desc">Pesanan diproses langsung setelah konfirmasi pembayaran via WhatsApp admin.</p>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <h4 class="trust-item-title" data-i18n="trust_card3_title">Panduan Lengkap & Ramah</h4>
+              <p class="trust-item-desc" data-i18n="trust_card3_desc">Admin siap memandu kamu cara login dan instalasi preset/XML hingga sukses.</p>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+              </div>
+              <h4 class="trust-item-title" data-i18n="trust_card4_title">Multi-Perangkat (Android & iOS)</h4>
+              <p class="trust-item-desc" data-i18n="trust_card4_desc">Fleksibel digunakan di berbagai smartphone Android maupun iPhone/iPad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION (ACCORDION) -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill pill-center" data-i18n="faq_pill">PERTANYAAN UMUM</div>
+          <h2 class="section-title condensed-title" data-i18n="faq_title">FAQ (FREQUENTLY ASKED QUESTIONS)</h2>
+          <p class="section-subtitle" data-i18n="faq_subtitle">
+            Temukan jawaban cepat atas pertanyaan yang sering diajukan seputar produk MotionVanta.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <!-- Question 1 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq_q1">Apa saja produk yang tersedia di MotionVanta?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq_a1">
+                MotionVanta menyediakan berbagai produk digital editing khususnya untuk Alight Motion, antara lain: Akun Alight Motion Pro (Private & Sharing), Preset Alight Motion kekinian (FF, MLBB, Anime), File XML siap import, Bundle Sound FX, serta efek visual & overlay premium.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq_q2">Apakah support untuk perangkat Android dan iOS?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq_a2">
+                Ya! Produk dan akun Alight Motion yang kami sediakan mendukung perangkat Android serta iPhone/iPad (iOS). Kami juga menyediakan panduan login untuk kedua sistem operasi tersebut.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq_q3">Bagaimana cara membeli produk di MotionVanta?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq_a3">
+                Caranya sangat mudah: 1. Pilih produk atau paket yang kamu mau di website ini. 2. Klik tombol 'Pesan via WhatsApp'. 3. Kirim pesan pre-filled ke admin kami di WhatsApp (+62 831-2132-1450). 4. Selesaikan pembayaran, dan produk akan langsung dikirimkan.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq_q4">Bagaimana cara menghubungi admin jika ada kendala?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq_a4">
+                Kamu bisa langsung klik tombol WhatsApp di pojok kanan bawah atau tombol di bagian Kontak. Admin kami aktif dan siap membantu pertanyaan maupun kendala kamu.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq_q5">Apakah ada garansi jika akun bermasalah?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq_a5">
+                Ya! Kami memberikan garansi penuh sesuai dengan durasi paket yang dibeli (misal: Garansi 30 hari untuk paket 1 bulan, Garansi 365 hari untuk paket 1 tahun). Jika terjadi kendala login atau aplikasi, admin akan membantu reset atau memberikan pergantian akun.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 6 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq_q6">Bagaimana proses pengiriman setelah pembayaran?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" data-i18n="faq_a6">
+                Setelah bukti pembayaran diverifikasi, admin akan langsung mengirimkan detail login akun (email & password) atau link download preset/XML secara instan melalui chat WhatsApp.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="badge-pill pill-center" data-i18n="contact_pill">LAYANAN RESPON CEPAT</div>
+          <h2 class="contact-title condensed-title" data-i18n="contact_title">BUTUH BANTUAN?</h2>
+          <p class="contact-subtitle" data-i18n="contact_subtitle">
+            Hubungi kami melalui WhatsApp untuk pertanyaan, informasi produk, atau pemesanan langsung.
+          </p>
+
+          <div class="contact-cta-wrapper">
+            <a href="https://wa.me/6283121321450?text=Halo%20MotionVanta%2C%20saya%20ingin%20mengetahui%20produk%20premium%20yang%20tersedia." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg direct-wa-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c4.55 0 8.24 3.69 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.178 8.178 0 0 1-5.83 2.41c-1.47 0-2.93-.39-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.55 3.7-8.24 8.26-8.24m4.53 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8 2.52 1.09 2.52.73 2.98.69.45-.04 1.47-.6 1.68-1.18.2-.59.2-1.09.14-1.19-.06-.1-.22-.16-.47-.28z"/></svg>
+              <span data-i18n="contact_btn">CHAT VIA WHATSAPP</span>
+            </a>
+
+            <div class="contact-status-indicator">
+              <span class="status-dot"></span>
+              <span data-i18n="contact_status">Admin Online • Respon Cepat</span>
+            </div>
+
+            <p class="contact-hours" data-i18n="contact_hours">Jam Operasional: Setiap Hari (08:00 - 23:00 WIB)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo">
+            <span class="logo-mark">⚡</span>
+            <span>Motion<span class="logo-accent">Vanta</span></span>
+          </a>
+          <p class="footer-desc" data-i18n="footer_desc">
+            Pusat produk digital, preset, XML, efek, dan kebutuhan editing Alight Motion premium dengan kualitas terbaik dan bergaransi.
+          </p>
+          <div class="social-icons-wrapper">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/_sweatbunnies?stkn=cDBiNTBxbmhyZzVp" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <!-- WhatsApp Channel -->
+            <a href="https://whatsapp.com/channel/0029Vb9Y2zU9sBIGjUPlgc2H" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp Channel">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c4.55 0 8.24 3.69 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.178 8.178 0 0 1-5.83 2.41c-1.47 0-2.93-.39-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.55 3.7-8.24 8.26-8.24m4.53 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8 2.52 1.09 2.52.73 2.98.69.45-.04 1.47-.6 1.68-1.18.2-.59.2-1.09.14-1.19-.06-.1-.22-.16-.47-.28z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-title" data-i18n="footer_nav_title">Navigasi Cepat</h4>
+          <ul class="footer-links">
+            <li><a href="#home" data-i18n="nav_home">Home</a></li>
+            <li><a href="#products" data-i18n="nav_products">Produk</a></li>
+            <li><a href="#pricing" data-i18n="nav_pricing">Harga</a></li>
+            <li><a href="#features" data-i18n="nav_features">Keunggulan</a></li>
+            <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Kontak</a></li>
+          </ul>
+        </div>
+
+        <!-- Product Categories -->
+        <div>
+          <h4 class="footer-title" data-i18n="footer_prod_title">Kategori Produk</h4>
+          <ul class="footer-links">
+            <li><a href="#products" data-i18n="footer_cat_1">Alight Motion Pro</a></li>
+            <li><a href="#products" data-i18n="footer_cat_2">Preset & XML Viral</a></li>
+            <li><a href="#products" data-i18n="footer_cat_3">Color Grading LUTs</a></li>
+            <li><a href="#products" data-i18n="footer_cat_4">Visual FX Overlays</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal & Policies -->
+        <div>
+          <h4 class="footer-title" data-i18n="footer_legal_title">Kebijakan & Ketentuan</h4>
+          <ul class="footer-links">
+            <li><a href="#legal-modal" data-legal-modal="terms" data-i18n="legal_terms">Syarat & Ketentuan</a></li>
+            <li><a href="#legal-modal" data-legal-modal="privacy" data-i18n="legal_privacy">Kebijakan Privasi</a></li>
+            <li><a href="#legal-modal" data-legal-modal="refund" data-i18n="legal_refund">Kebijakan Refund & Garansi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p data-i18n="copyright">© 2026 MotionVanta. All rights reserved.</p>
+        <p data-i18n="footer_disclaimer">MotionVanta adalah penyedia resource kreatif dan layanan digital independen.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/6283121321450?text=Halo%20MotionVanta%2C%20saya%20ingin%20mengetahui%20produk%20premium%20yang%20tersedia." target="_blank" rel="noopener noreferrer" class="floating-wa-btn direct-wa-btn" aria-label="Chat WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c4.55 0 8.24 3.69 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.178 8.178 0 0 1-5.83 2.41c-1.47 0-2.93-.39-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.55 3.7-8.24 8.26-8.24m4.53 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8 2.52 1.09 2.52.73 2.98.69.45-.04 1.47-.6 1.68-1.18.2-.59.2-1.09.14-1.19-.06-.1-.22-.16-.47-.28z"/></svg>
+    <span data-i18n="floating_wa_text">Chat WhatsApp</span>
+  </a>
+
+  <!-- PRODUCT DETAIL MODAL -->
+  <div class="modal-overlay" id="product-detail-modal" role="dialog" aria-modal="true" aria-labelledby="modal-prod-title">
+    <div class="modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="modal-body">
+        <div class="modal-prod-grid">
+          <div class="modal-image-col">
+            <img id="modal-prod-img" src="" alt="Product Preview">
+            <div id="modal-prod-badge" class="product-badge"></div>
+          </div>
+          <div class="modal-info-col">
+            <h2 id="modal-prod-title" class="product-title" style="font-size: 1.5rem;"></h2>
+            <div class="product-pricing">
+              <span id="modal-prod-price" class="price-value"></span>
+              <span id="modal-prod-period" class="price-period"></span>
+            </div>
+            <p id="modal-prod-desc" class="product-desc"></p>
+            <div>
+              <h4 style="font-size: 0.95rem; color: #fff; margin-bottom: 0.5rem;" data-i18n="modal_features_title">Fitur yang Didapatkan:</h4>
+              <ul id="modal-prod-features" class="modal-features-list"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; justify-content: flex-end; flex-wrap: wrap;">
+          <button class="btn btn-secondary modal-close-btn-text modal-close-btn" data-i18n="modal_close">Tutup</button>
+          <a id="modal-prod-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-wa">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c4.55 0 8.24 3.69 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.178 8.178 0 0 1-5.83 2.41c-1.47 0-2.93-.39-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.55 3.7-8.24 8.26-8.24m4.53 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8 2.52 1.09 2.52.73 2.98.69.45-.04 1.47-.6 1.68-1.18.2-.59.2-1.09.14-1.19-.06-.1-.22-.16-.47-.28z"/></svg>
+            <span data-i18n="modal_order_wa">Pesan via WhatsApp Sekarang</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEGAL POLICIES MODAL -->
+  <div class="modal-overlay" id="legal-modal" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
+    <div class="modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="modal-body">
+        <h2 id="legal-modal-title" class="product-title" style="font-size: 1.5rem; margin-bottom: 1rem;"></h2>
+        <div id="legal-modal-content" class="legal-content"></div>
+        <div style="display: flex; justify-content: flex-end; margin-top: 1.5rem;">
+          <button class="btn btn-primary modal-close-btn" data-i18n="modal_close">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Files -->
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
